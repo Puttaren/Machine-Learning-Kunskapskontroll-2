@@ -4,7 +4,7 @@ Detta projekt är en djupdykning i bildklassificering med MNIST-datasetet. Resan
 * Presentationen kan beskådas här: https://youtu.be/O-3N8rNN_EU  
 * Appen är driftsatt och finns för körning här: [https://puttaren-predict.streamlit.app/](https://puttaren-predict.streamlit.app/)
 
-### 🔄 Systemarkitektur & Feedback-loop
+### Systemarkitektur & Feedback-loop
 Applikationen använder en inbyggd feedback-loop för att samla in användardata i realtid och hantera svårklassificerade handstilar:
 ```text
 [Användare ritar/laddar upp siffra] ──> [preprocess.py (Bildbehandling)] ──> [SVC-Modell (Prediktion)]
@@ -13,7 +13,7 @@ Applikationen använder en inbyggd feedback-loop för att samla in användardata
    [Framtida omträning] <── [Bild sparas i logg] <── [Användare klickar: "Felaktig prediktion"]
 ```
 
-## 🧵 Projektets röda tråd
+## Projektets röda tråd
 * **1. Teoretisk grund**: Besvarade de teoretiska frågorna kring ML-koncept och Python-objekt för att säkra grundförståelsen.
 * **2. Versionshantering**: Etablerade ett arbetsflöde i **GitHub** för att strukturera projektet professionellt (visste att det skulle bli många notebooks).
 * **3. Kunskapsinhämtning**: Lärde mig grunderna genom kodexemplet i boken och Scikit-learns dokumentation för att hitta "nyckeln" (Notebook 1).
@@ -24,14 +24,14 @@ Applikationen använder en inbyggd feedback-loop för att samla in användardata
 * **8. Experimentell Accuracy-jakt**: Fortsatta experiment "för sakens skull" med allt möjligt från jurysystem (Ensemble), KNN och SVC-finjusteringar i jakt på mer accuracy (Notebooks 6-14).
 * **9. Avslutning**: Finputsade min självutvärdering samt skrev en sammanfattning för presentationen.
 
-## 📓 Notebooks (Experimentlogg)
-Det blev många notebooks, men det räcker om du kollar notebook 5–7 där den modell som används i appen skapades. Övriga innehåller mina första stapplande steg inom ML-modellering (notebook 1) och hela vägen upp till en relativt avancerad nivå följt av allmän utforskning.
+## Notebooks (Experimentlogg)
+Det blev många notebooks, men det viktigast är notebook 5–7 där den modell som används i appen skapades. Övriga innehåller mina första stapplande steg inom ML-modellering (notebook 1) och hela vägen upp till en relativt avancerad nivå följt av allmän utforskning.
 
-### 🔍 Analys & Preprocessing
+## Analys & Preprocessing
 * `Titta på MNIST-bilder.ipynb`: Inledande EDA och visualisering av rådata.
 * `Test av preprocessor.ipynb`: Visualisering av hur `preprocess.py` transformerar handritade bilder till maskininläsbart format.
 
-### 🧪 Modelleringsresan (Steg 1-14)
+### Modelleringsresan (Steg 1-14)
 
 #### Steg 1: Grunden
 * `MNIST-modellering 1 - experiment.ipynb`: Första testerna och grundläggande modellval baserat på kursboken.
@@ -59,17 +59,17 @@ Det blev många notebooks, men det räcker om du kollar notebook 5–7 där den 
 #### Steg 14: Allmän utforskning
 * `MNIST-modellering 14 - lek och kladd.ipynb`: Experimentell sandlåda för Hard Negative Mining och vilda idéer.
 
-## 📂 Streamlit-appen
-### 🏠 Script och ingående bibliotek
+# Streamlit-appen
+### Script och ingående bibliotek
 * **predict.py**: Streamlit-appen med rit-/uppladdningsfunktion och feedback-logik.
 * **preprocess.py**: "Motorn" som sköter bildbehandlingen av ritade/uppladdade bilder.
 * **requirements.txt**: Alla nödvändiga bibliotek för driftsättning.
  
-### 📝 Teoretiskt ramverk
+### Teoretiskt ramverk
 * **Teori.txt**: Svar på teorifrågorna.
 * **Självutvärdering.txt**: Projektutvärdering.
 
-## 🛠 Tekniker & Metoder
+## Teknik och metodik
 * **SVC (RBF Kernel)**: Den primära expertmodellen med hög precision.
 * **Voting Classifier (Soft Voting)**: Kombinerar sannolikheter från SVC, KNN och RF för stabilitet.
 * **Hard Negative Mining**: Strategisk metod för att identifiera och träna på modellens specifika misstag.
